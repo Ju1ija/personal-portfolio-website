@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    padding: 0;
 }
 
 html {
@@ -31,7 +32,6 @@ nav {
 .nav-list {
     display: flex;
     margin-right: 10px;
-    /* margin-right: 20px; */
     font-size: small;
     font-family: "Monaco", sans-serif;
     text-transform: uppercase;
@@ -59,7 +59,6 @@ nav {
 }
 
 h1 {
-    /* font-size: 5vh; */
     font-size: 4vh;
     padding: 0 60px;
 }
@@ -79,12 +78,10 @@ h2 {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: 18rem;
-    /* grid-template-columns: repeat(auto-fit, 280px); */
-    /* gap: 50px 30px; */
+    grid-template-columns: 290px;
     gap: 50px 40px;
     justify-content: center;
-    max-width: 1210px;
+    max-width: 500px;
     margin: auto;
     margin-bottom: 80px;
 }
@@ -147,13 +144,14 @@ footer p {
     margin: 15px 0 30px 0;
 }
 
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px){
     .nav-list {
-        font-size: 25px;
+        font-size: 28px;
+        margin-right: 20px;
     }
 
     .nav-list a {
-        padding: 25px;
+        padding: 30px;
     }
 
     h2 {
@@ -162,7 +160,7 @@ footer p {
 
     .projects-grid {
         grid-template-columns: repeat(auto-fit, 400px);
-        gap: 50px 30px;
+        max-width: 840px;
     }
 
     .polaroid {
@@ -184,11 +182,7 @@ footer p {
     }
 }
 
-@media only screen and (min-width : 1200px) {
-    .nav-list {
-        font-size: small;
-    }
-
+@media only screen and (min-width: 1025px) {
     .nav-list a {
         padding: 20px;
     }
@@ -202,22 +196,13 @@ footer p {
     }
 
     .projects-grid {
-        grid-template-columns: repeat(auto-fit, 280px);
-        gap: 50px 30px;
-    }
-
-    .polaroid {
-        height: 340px;
+        grid-template-columns: repeat(auto-fit, 300px);
+        max-width: 1320px;
     }
 
     .polaroid p {
         font-size: 15px;
     }
-
-    footer img {
-        height: 25px;
-        padding: 15px;
-    }   
     
     footer p {
         font-size: 13px;
